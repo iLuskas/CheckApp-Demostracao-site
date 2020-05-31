@@ -1,0 +1,115 @@
+.section-slide {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}
+
+.section-container-itens {
+    height: 100vh;
+}
+
+.lbl-bold {
+    font-weight: 700;
+}
+
+/*SECTION HOME*/
+.section-home {
+    background-image: url("../../../assets/img/fundoChk.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    font-family: "Roboto", sans-serif;
+  }
+
+.section-home-left {
+   font-size: 1.5em;
+}
+.section-home-left-lbltxt {
+    margin-right: 30px;
+}
+/*SECTION HOME*/
+
+/* SECTION SOBRE*/
+.section-sobre {
+    background-color: brown;
+    font-family: "Roboto", sans-serif;
+  }
+
+.section-sobre-container-itens {
+    height: 100vh;
+    color: white;
+}
+
+.section-sobre-container-itens > div p {
+    font-size: 20px;
+}
+
+.section-sobre-item {
+    width: 90%;
+}
+
+.section-sobre-img {
+    width: 600px;
+    height: 100vh;
+    margin-right: 40px;
+}
+/* SECTION SOBRE*/
+
+/* SECTION FUNCIONALIDADES*/
+.section-funcionalidade {
+    padding-top: 130px;
+    min-height: 100vh;
+    font-family: "Roboto", sans-serif;
+}
+.section-funcionalidade-container{
+   height: 100vh; 
+}
+
+.section-funcionalidade-container-itens > div {
+    margin-top: 15px;
+    margin-left: 50px;
+    width: 200px;
+}
+
+.section-funcionalidade-container-item {
+    width: 480px;
+}
+/* SECTION FUNCIONALIDADES*/
+
+/* SECTION CONTATO*/
+#contato {
+    margin-top: 120px;
+}
+
+.section-contato {
+    padding-top: 80px;
+    background-image: url("../../../assets/img/fundoChk.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+
+.section-contato-form {
+    width: 450px;
+}
+
+.section-contato-h1 {
+    font-size: 2em;
+}
+
+.section-contato-p {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.section-contato-form-field {
+    width: 400px;
+}
+
+.section-contato-form-button {
+    background-color: chartreuse;
+    color: white;
+}
+/* SECTION CONTATO*/

@@ -1,0 +1,16 @@
+.navbar {
+  background-image: linear-gradient(to bottom, #bc2e11, red);
+}
+
+.navbar-itens > a {
+  margin-left: 10px;
+  color: white;
+}
+.navbar-header {
+  position: fixed;
+  z-index: 1000;
+}
+
+.navbar-logo {
+  margin-left: 5px;
+}
