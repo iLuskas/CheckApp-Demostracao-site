@@ -11,12 +11,14 @@ import { HomeComponent } from './template/home/home.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { EmailService } from './services/Email.service';
 import { HttpClientModule } from '@angular/common/http';
+import { FooterComponent } from './template/footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    HomeComponent
+    HomeComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
