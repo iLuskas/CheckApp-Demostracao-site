@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { EmailService } from 'src/app/services/Email.service';
 
 @Component({
   selector: 'app-home',
@@ -9,7 +10,7 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 export class HomeComponent implements OnInit {
   formContato: FormGroup;
 
-  constructor(private fb: FormBuilder) { }
+  constructor(private fb: FormBuilder, private emailService: EmailService) { }
 
   ngOnInit(): void {
     this.createFormContato();
@@ -26,6 +27,9 @@ export class HomeComponent implements OnInit {
 
   enviarEmail() {
     console.log('EMAILMODELO', this.formContato.value);
+    if (this.emailService.onSendEmail(this.formContato.value)) {
+      this.formContato.reset();
+    }
   }
 
   isFieldInvalid(field: string) {

@@ -341,7 +341,7 @@
                 >Utilize o formulário para entrar em contato.</mat-card-title
               >
             </mat-card-header>
-            <form [formGroup]="formContato">
+            <form [formGroup]="formContato" (submit)="enviarEmail()">
               <mat-card-content fxLayoutAlign="center stretch">
                 <div fxLayout="column">
                   <div fxFlex>

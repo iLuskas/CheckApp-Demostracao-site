@@ -1,20 +1,32 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { ModeloContato } from '../models/ModeloContato';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Injectable()
 export class EmailService {
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient, private snackBar: MatSnackBar) {}
 
-  onSendEmail(modeloContato: ModeloContato) {
-    let data = {
-      service_id: 'YOUR SERVICE ID',
-      template_id: 'YOUR TEMPLATE',
-      user_id: 'YOUR USER ID',
+  showMessage(msg: string, isError: boolean = false): void {
+    this.snackBar.open(msg, 'X', {
+      duration: 3000,
+      horizontalPosition: 'right',
+      verticalPosition: 'top',
+      panelClass: isError ? ['msg-error'] : ['msg-success'],
+    });
+  }
+
+
+  onSendEmail(modeloContato: ModeloContato): boolean {
+    const data = {
+      service_id: 'smtp_server',
+      template_id: 'template_IN7l7MUh',
+      user_id: 'user_uNaXe90qNESZPTgAylkUE',
       template_params: {
-        name: modeloContato.nome,
-        emailAddress: modeloContato.email,
-        message: modeloContato.mensagem
+        nome: modeloContato.nome,
+        email: modeloContato.email,
+        telefone: modeloContato.telefone,
+        mensagem: modeloContato.mensagem
       },
     };
 
@@ -24,11 +36,14 @@ export class EmailService {
       })
       .subscribe(
         (result) => {
-          alert('Your message has been sent!');
+            this.showMessage('Mensagem enviada com sucesso!');
+            return true;
         },
         (error: HttpErrorResponse) => {
-          alert('Oops... ' + error.message);
+            this.showMessage('Oops... ' + error.message, true);
+            return false;
         }
       );
+    return false;
   }
 }
