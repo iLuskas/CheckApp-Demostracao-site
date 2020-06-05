@@ -12,7 +12,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { EmailService } from './services/Email.service';
 import { HttpClientModule } from '@angular/common/http';
 import { FooterComponent } from './template/footer/footer.component';
-
+import { ScrollingModule } from '@angular/cdk/scrolling';
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +28,8 @@ import { FooterComponent } from './template/footer/footer.component';
     FlexLayoutModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ScrollingModule
   ],
   providers: [EmailService],
   bootstrap: [AppComponent]

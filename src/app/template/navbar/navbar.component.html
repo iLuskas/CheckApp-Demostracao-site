@@ -1,15 +1,38 @@
-<mat-toolbar class="navbar mat-elevation-z4 navbar-header">
-  <div fxLayout="row">
-    <div fxFlex="10">
-      <img
-        src="../assets/img/logochk.png"
-        alt="Logo imagem"
-        class="navbar-logo"
-      />
-    </div>
-    <span class="spacer-frl"></span>
-    <div>
-      <mat-nav-list fxLayout="row" class="navbar-itens">
+
+  <mat-toolbar class="navbar mat-elevation-z4 navbar-header">
+    <mat-toolbar-row>
+      <button class="btn-menu" mat-icon-button (click)="sidenav.toggle()" fxShow="true" fxHide.gt-sm>
+        <mat-icon>menu</mat-icon>
+      </button>
+      <div fxShow="true" fxHide.lt-md>
+        <img
+          src="../assets/img/logochk.png"
+          alt="Logo imagem"
+          class="navbar-logo"
+        />
+      </div>
+      <div fxShow="true" fxHide.lt-md>
+        <mat-nav-list fxLayout="row" class="navbar-itens">
+          <a mat-list-item routerLinkActive="active" (click)="toHome()"> HOME </a>
+          <a mat-list-item routerLinkActive="active" (click)="toSobre()">
+            SOBRE
+          </a>
+          <a mat-list-item routerLinkActive="active" (click)="toFuncionalidade()">
+            FUNCIONALIDADES
+          </a>
+          <a mat-list-item routerLinkActive="active" (click)="toContato()">
+            CONTATO
+          </a>
+        </mat-nav-list>
+      </div>
+      <span class="spacer-frl"></span>
+      <a href="https://checkapp-angular.herokuapp.com/" target="_blank" mat-raised-button>ENTRAR</a>  
+    </mat-toolbar-row>
+ </mat-toolbar>
+
+  <mat-sidenav-container fxFlexFill>
+    <mat-sidenav #sidenav>
+      <mat-nav-list class="navbar-itens-sidebar">
         <a mat-list-item routerLinkActive="active" (click)="toHome()"> HOME </a>
         <a mat-list-item routerLinkActive="active" (click)="toSobre()">
           SOBRE
@@ -21,8 +44,9 @@
           CONTATO
         </a>
       </mat-nav-list>
-    </div>
-  </div>
-  <span class="spacer-frl"></span>
-  <a href="https://checkapp-angular.herokuapp.com/" target="_blank" mat-raised-button>ENTRAR</a>
-</mat-toolbar>
+    </mat-sidenav>
+    <mat-sidenav-content fxFlexFill> 
+      <app-home></app-home>
+      <app-footer></app-footer>
+    </mat-sidenav-content>
+  </mat-sidenav-container>

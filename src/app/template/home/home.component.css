@@ -12,11 +12,17 @@
     font-weight: 700;
 }
 
+.make-scrollable {
+    height: 600px;
+    overflow-y: scroll;
+}
+
 /*SECTION HOME*/
 .section-home {
     background-image: url("../../../assets/img/fundoChk.jpg");
     background-position: center;
     background-size: cover;
+    background-attachment: fixed;
     background-repeat: no-repeat;
     min-height: 100vh;
     font-family: "Roboto", sans-serif;
@@ -27,6 +33,10 @@
 }
 .section-home-left-lbltxt {
     margin-right: 30px;
+}
+
+.section-home-left-mobile {
+    margin: 10px;
 }
 /*SECTION HOME*/
 
@@ -76,6 +86,7 @@
     width: 480px;
     height: 150px;
 }
+
 /* SECTION FUNCIONALIDADES*/
 
 /* SECTION CONTATO*/
@@ -87,6 +98,7 @@
     padding-top: 80px;
     background-image: url("../../../assets/img/fundoChk.jpg");
     background-position: center;
+    background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
     min-height: 100vh;
@@ -94,6 +106,10 @@
 
 .section-contato-form {
     width: 450px;
+}
+
+.section-contato-form-mobile {
+    width: 300px;
 }
 
 .section-contato-h1 {
@@ -107,6 +123,11 @@
 
 .section-contato-form-field {
     width: 400px;
+}
+
+
+.section-contato-form-field-mobile {
+    width: 290px;
 }
 
 .section-contato-form-button {
