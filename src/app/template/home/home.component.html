@@ -9,12 +9,15 @@
         class="section-home-right"
         fxLayoutAlign="center center"
         fxShow="true"
-        fxHide.lt-sm
+        fxHide.lt-md
       >
         <img src="../../../assets/img/chk_home.png" alt="Imagem" />
       </div>
       <div fxFlex class="section-home-left " fxLayoutAlign="center center">
-        <div class="section-home-left-container" fxLayout="column" ngClass.xs="section-home-left-mobile" fxLayoutAlign="space-evenly center">
+        <div class="section-home-left-container" fxLayout="column" 
+        ngClass.xs="section-home-left-mobile" 
+        fxLayoutAlign="space-evenly center"
+        ngClass.sm="">
           <div>
             <h1 class="lbl-bold section-home-left-txtTitulo" ngClass.xs="lbl-bold section-home-left-txtTitulo-mobile">
               Gestão Inteligente, relatórios e alertas automáticos
@@ -109,13 +112,14 @@
             <div
               fxLayout="row wrap"
               ngClass.gt-sm="section-funcionalidade-container-itens"
-              fxLayoutAlign="center center"
+              fxLayoutAlign="space-between center"
               fxLayout.xs="column"
             >
               <div
                 *ngFor="let card of cards"
                 fxFlex="calc(33%-25px)"
-                fxFlex.sm="calc(50%-25px)"
+                fxFlex.sm="calc(100%-25px)"
+                class="section-funcionalidade-cards"
               >
                 <mat-card
                   class=" mat-elevation-z4"
