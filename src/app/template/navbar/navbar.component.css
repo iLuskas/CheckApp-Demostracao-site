@@ -1,20 +1,29 @@
 .navbar {
-  background-image: linear-gradient(to bottom, #bc2e11, red);
+  position: fixed;
+  z-index: 1000;
+  background-image: linear-gradient(to bottom, #3F51B5, #2B3DB5);
+}
+mat-toolbar {
+  height: 55px;
+}
+
+mat-toolbar-row {
+  height: 50px;
+}
+
+.mat-toolbar-multiple-rows {
+  min-height: 55px;
 }
 
 .navbar-itens > a {
   margin-left: 10px;
   color: white;
+  font-size: 15px;
 }
 
 .navbar-itens-sidebar{
   margin-top: 70px;
   color: #000;
-}
-
-.navbar-header {
-  position: fixed;
-  z-index: 1000;
 }
 
 .navbar-logo {
@@ -39,4 +48,19 @@
 .navbar-itens > a:hover::after {
 	width: 100%;
 	transition: width .3s;
+}
+
+.img-mobile {
+  align-content: center;
+  align-items: center;
+}
+
+.btn-entrar {
+  color: white;
+  background-color: #2BB530;
+  margin-left: 10px;
+}
+
+.btn-entrar:hover {
+  background-color: #33C738;
 }

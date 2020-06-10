@@ -4,19 +4,25 @@
     fxLayoutAlign="space-around center"
   >
     <div fxLayout="row wrap" class="section-container-itens">
-      <div fxFlex class="section-home-right" fxLayoutAlign="center center" fxShow="true" fxHide.lt-sm>
+      <div
+        fxFlex
+        class="section-home-right"
+        fxLayoutAlign="center center"
+        fxShow="true"
+        fxHide.lt-sm
+      >
         <img src="../../../assets/img/chk_home.png" alt="Imagem" />
       </div>
-      <div fxFlex class="section-home-left" fxLayoutAlign="center center">
-        <div fxLayout="column" ngClass.xs="section-home-left-mobile">
+      <div fxFlex class="section-home-left " fxLayoutAlign="center center">
+        <div class="section-home-left-container" fxLayout="column" ngClass.xs="section-home-left-mobile" fxLayoutAlign="space-evenly center">
           <div>
-            <h1 class="lbl-bold">
+            <h1 class="lbl-bold section-home-left-txtTitulo" ngClass.xs="lbl-bold section-home-left-txtTitulo-mobile">
               Gestão Inteligente, relatórios e alertas automáticos
             </h1>
           </div>
-          <div class="section-home-left-lbltxt">
+          <div class="section-home-left-lbltxt" ngClass.xs="section-home-left-lbltxt-mobile">
             <p>
-              <span class="lbl-bold">CHECKApp</span> é capaz de emitir
+              <span class="lbl-bold">CHECK<span class="lbl-app">App</span></span> é capaz de emitir
               relatórios automáticos mensais de Vencimento de Manutenções,
               Testes Hidrostáticos e Inspeção Periódica, Inspeção Mensal de
               extintores de incêndio e equipamentos de combate a incêndio e
@@ -85,47 +91,51 @@
       </div>
     </div>
   </section>
-  <section
-    id="funcionalidade"
+  <section id="funcionalidade"
     class="section-slide section-funcionalidade"
-    fxLayoutAlign="center center"
+    ngClass.xs="section-funcionalidade-mobile"
   >
-    <div fxLayout="row wrap" fxLayoutWrap class="section-funcionalidade-container">
+    <div
+      fxLayout="row wrap"
+      fxLayoutWrap
+      class="section-funcionalidade-container"
+    >
       <div fxFlex>
         <div fxLayout="column">
-          <div fxLayoutAlign="center center">
+          <div fxLayoutAlign="center center" fxShow="true" fxHide.lt-sm>
             <h1 class="lbl-bold">Como Funciona</h1>
           </div>
           <div fxFlex>
             <div
-            itemSize="100"
               fxLayout="row wrap"
-              fxLayout.xs="column"
-              class="section-funcionalidade-container-itens"
+              ngClass.gt-sm="section-funcionalidade-container-itens"
               fxLayoutAlign="center center"
+              fxLayout.xs="column"
             >
-              <div *ngFor="let card of cards"  fxFlex="calc(33%-25px)" fxFlex.sm="calc(50%-25px)">
+              <div
+                *ngFor="let card of cards"
+                fxFlex="calc(33%-25px)"
+                fxFlex.sm="calc(50%-25px)"
+              >
                 <mat-card
-                  class="section-funcionalidade-container-item mat-elevation-z4"
+                  class=" mat-elevation-z4"
                 >
-                  <div fxLayout="row">
-                    <div
-                      fxFlex="30"
-                    >
+                  <div fxLayout="row wrap">
+                    <div fxFlex="30">
                       <img
-                        src="../../../assets/img/{{card.img}}"
+                        src="../../../assets/img/{{ card.img }}"
                         alt="imagem funcionalidades"
+                        ngClass.xs="img-mobile"
+                        ngClass.sm="img-mobile"
                       />
                     </div>
                     <div fxFlex>
                       <mat-card-header>
-                        <mat-card-title
-                          >{{card.title}}</mat-card-title
-                        >
+                        <mat-card-title>{{ card.title }}</mat-card-title>
                       </mat-card-header>
                       <mat-card-content>
                         <p>
-                          {{card.text}}
+                          {{ card.text }}
                         </p>
                       </mat-card-content>
                     </div>
@@ -144,17 +154,19 @@
     fxLayoutAlign="center center"
   >
     <div fxLayout="row wrap">
-      <div fxFlex>
-        <div fxLayout="column">
+        <div fxLayout="column" class="section-contato-container">
           <div>
-            <h1 class="lbl-bold section-contato-h1">Contato</h1>
-            <p class="lbl-bold section-contato-p">
+            <h1 class="lbl-bold section-contato-h1" ngClass.xs="section-contato-h1-mobile">Contato</h1>
+            <p class="lbl-bold section-contato-p" ngClass.xs="section-contato-p-mobile">
               Quer saber mais sobre nosso aplicativo? Ótimo! Envie-nos uma
               mensagem e retornaremos o mais rápido possível!
             </p>
           </div>
           <div fxFlex fxLayoutAlign="center center">
-            <mat-card class="section-contato-form mat-elevation-z6" ngClass.xs="section-contato-form-mobile">
+            <mat-card
+              class="section-contato-form mat-elevation-z6"
+              ngClass.xs="section-contato-form-mobile"
+            >
               <mat-card-header>
                 <mat-card-title
                   >Utilize o formulário para entrar em contato.</mat-card-title
@@ -185,7 +197,7 @@
                       <mat-form-field
                         appearance="outline"
                         class="section-contato-form-field"
-                         ngClass.xs="section-contato-form-field-mobile"
+                        ngClass.xs="section-contato-form-field-mobile"
                       >
                         <mat-label>E-mail</mat-label>
                         <input
@@ -203,7 +215,7 @@
                       <mat-form-field
                         appearance="outline"
                         class="section-contato-form-field"
-                         ngClass.xs="section-contato-form-field-mobile"
+                        ngClass.xs="section-contato-form-field-mobile"
                       >
                         <mat-label>Telefone</mat-label>
                         <input
@@ -250,7 +262,6 @@
               </form>
             </mat-card>
           </div>
-        </div>
       </div>
     </div>
   </section>

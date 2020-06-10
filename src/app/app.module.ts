@@ -12,7 +12,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { EmailService } from './services/Email.service';
 import { HttpClientModule } from '@angular/common/http';
 import { FooterComponent } from './template/footer/footer.component';
-import { ScrollingModule } from '@angular/cdk/scrolling';
+import { MatCarouselModule } from '@ngmodule/material-carousel';
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,7 +29,7 @@ import { ScrollingModule } from '@angular/cdk/scrolling';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    ScrollingModule
+    MatCarouselModule.forRoot()
   ],
   providers: [EmailService],
   bootstrap: [AppComponent]

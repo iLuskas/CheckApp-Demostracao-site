@@ -30,9 +30,35 @@
 
 .section-home-left {
    font-size: 1.5em;
+   text-align: justify;
 }
-.section-home-left-lbltxt {
-    margin-right: 30px;
+
+.section-home-left-container {
+    height: 100vh;
+}
+
+.section-home-left-lbltxt > p {
+    line-height: 48px;
+    font-size: 30px;
+    padding-right: 20px;
+}
+
+.section-home-left-txtTitulo {
+    margin-top: 20px;
+    font-size: 35px
+}
+
+.section-home-left-txtTitulo-mobile {
+    font-size: 1.1em;
+}
+
+.lbl-app {
+    color: #2BB530;
+}
+
+.section-home-left-lbltxt-mobile > p {
+    line-height: 25px;
+    font-size: 20px;
 }
 
 .section-home-left-mobile {
@@ -42,13 +68,14 @@
 
 /* SECTION SOBRE*/
 .section-sobre {
-    background-color: brown;
+    background-color: #2B3DB5;
     font-family: "Roboto", sans-serif;
   }
 
 .section-sobre-container-itens {
     height: 100vh;
     color: white;
+    text-align: justify;
 }
 
 .section-sobre-container-itens > div p {
@@ -69,9 +96,16 @@
 /* SECTION FUNCIONALIDADES*/
 .section-funcionalidade {
     padding-top: 130px;
+    height: 800px;
     min-height: 100vh;
     font-family: "Roboto", sans-serif;
 }
+
+.section-funcionalidade-mobile {
+    padding-top: 20px;
+    height: 1370px;
+}
+
 .section-funcionalidade-container{
    height: 100vh; 
 }
@@ -87,11 +121,26 @@
     height: 150px;
 }
 
+.img-mobile {
+    width: 80px;
+    height: 80px;
+}
+
+mat-card-title {
+    text-align: justify;
+}
+
+mat-card-content > p {
+    text-align: justify;
+}
+
+
 /* SECTION FUNCIONALIDADES*/
 
 /* SECTION CONTATO*/
 #contato {
     margin-top: 180px;
+    z-index: 1;
 }
 
 .section-contato {
@@ -106,6 +155,7 @@
 
 .section-contato-form {
     width: 450px;
+    height: 450px;
 }
 
 .section-contato-form-mobile {
@@ -120,9 +170,22 @@
     font-size: 1.5em;
     margin-bottom: 20px;
 }
+.section-contato-h1-mobile {
+    padding-left: 15px;
+}
+
+.section-contato-p-mobile {
+    padding-left: 15px;
+    font-weight: 500;
+}
 
 .section-contato-form-field {
     width: 400px;
+    padding-bottom: 0px;
+}
+
+::ng-deep .mat-form-field-wrapper {
+     padding-bottom: 5px;
 }
 
 
@@ -133,5 +196,9 @@
 .section-contato-form-button {
     background-color: chartreuse;
     color: white;
+}
+
+.section-contato-container {
+    padding-bottom: 40px;
 }
 /* SECTION CONTATO*/

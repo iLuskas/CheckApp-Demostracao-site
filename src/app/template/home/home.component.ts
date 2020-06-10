@@ -9,7 +9,6 @@ import { EmailService } from 'src/app/services/Email.service';
 })
 export class HomeComponent implements OnInit {
   formContato: FormGroup;
-  items = Array.from({length: 100000}).map((_, i) => `Item #${i}`);
   cards: {title: string, img: string, text: string}[] = [
     {title: '1. Cadastro | Inventário', img: 'fundo-funcionalidade-item1.png', text: 'Cadastrando todos os equipamentos contra incêndio você terá criado automaticamente o inventário dos equipamentos, melhorando assim sua gestão.'},
     {title: '2. Gestão', img: 'fundo-funcionalidade-item2.png', text: 'Garante a gestão mensal e periódica dos equipamentos contra incêndio e emergência conforme normas vigentes.'},
