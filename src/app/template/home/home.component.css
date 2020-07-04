@@ -130,6 +130,7 @@
 
 mat-card-title {
     text-align: justify;
+    font-size: 1rem;
 }
 
 mat-card-content > p {
@@ -156,12 +157,13 @@ mat-card-content > p {
 }
 
 .section-contato-form {
-    width: 450px;
-    height: 450px;
+    width: 430px;
+    height: 350px;
 }
 
 .section-contato-form-mobile {
     width: 300px;
+    height: 400px;
 }
 
 .section-contato-h1 {

@@ -19,6 +19,8 @@ export class HomeComponent implements OnInit {
     {title: '7. Relatórios Gerenciais', img: 'fundo-funcionalidade-item7.png', text: 'Com vários modelos de relatórios, com data, horários e responsávels pela inspeção mensal conforme NBR 12962:2016 item 5.3.'},
     {title: '8. Alertas Automáticos', img: 'fundo-funcionalidade-item8.png', text: 'Alertas automáticos de equipamentos vencendo o período de inspeção, manutenção ou recargas.'},
   ];
+
+  private formSubmitAttempt: boolean;
   constructor(private fb: FormBuilder, private emailService: EmailService) { }
 
   ngOnInit(): void {
@@ -45,7 +47,7 @@ export class HomeComponent implements OnInit {
     return (
       (!this.formContato.get(field).valid &&
         this.formContato.get(field).touched) ||
-      (this.formContato.get(field).untouched)
+      (this.formContato.get(field).untouched && this.formSubmitAttempt)
     );
   }
 

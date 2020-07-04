@@ -27,8 +27,8 @@ mat-toolbar-row {
 }
 
 .navbar-logo {
-  width: 110;
-  height: 40px;
+  margin-top: 15px;
+  width: 15vmax;
 }
 
 .btn-menu {
